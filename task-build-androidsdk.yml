@@ -52,7 +52,7 @@ spec:
           export ANDROID_HOME=$PWD/.android
           export PATH=$PATH:$PWD/.android/platform-tools/
           touch ./.android/repositories.cfg
-          echo y | "$ANDROID_HOME/tools/bin/sdkmanager" "ndk-bundle"
+          echo y | "$ANDROID_HOME/tools/bin/sdkmanager" "ndk;20.0.5594570"
           echo y | .android/tools/bin/sdkmanager "platform-tools" "platforms;android-29"
           echo y | .android/tools/bin/sdkmanager "system-images;android-29;default;x86"
           chmod +x ./gradlew
