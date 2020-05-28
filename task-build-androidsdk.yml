@@ -43,7 +43,7 @@ spec:
           rustup target add armv7-linux-androideabi
           rustup target add aarch64-linux-android
           rustup target add i686-linux-android
-          export ANDROID_COMPILE_SDK=`egrep '^[[:blank:]]+compileSdkVersion'  app/build.gradle | awk '{print $2}'`
+          export ANDROID_COMPILE_SDK=`egrep '^[[:blank:]]+compileSdkVersion'  ./source/build.gradle | awk '{print $2}'`
           echo $ANDROID_SDK_TOOLS
           echo $ANDROID_COMPILE_SDK
           wget --quiet --output-document=/tmp/sdk-tools-linux.zip https://dl.google.com/android/repository/sdk-tools-linux-${ANDROID_SDK_TOOLS}.zip
