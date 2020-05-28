@@ -36,7 +36,7 @@ spec:
           ls ./source
           whoami
           apt-get update -y
-          apt-get install -y openjdk-8-jdk cmake curl wget
+          apt-get install -y openjdk-8-jdk cmake curl wget git unzip
           curl https://sh.rustup.rs -sSf | sh -s -- -y
           echo 'export PATH=/root/.cargo/bin:$PATH' >> /root/.bashrc
           export PATH=/root/.cargo/bin:$PATH
@@ -47,7 +47,7 @@ spec:
           export ANDROID_COMPILE_SDK=`egrep '^[[:blank:]]+compileSdkVersion'  ./source/build.gradle | awk '{print $2}'`
           echo $ANDROID_SDK_TOOLS
           echo $ANDROID_COMPILE_SDK
-          wget --quiet --output-document=/tmp/sdk-tools-linux.zip https://dl.google.com/android/repository/sdk-tools-linux-${ANDROID_SDK_TOOLS}.zip
+          wget --quiet --output-document=/tmp/sdk-tools-linux.zip https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
           unzip /tmp/sdk-tools-linux.zip -d .android
           export ANDROID_HOME=$PWD/.android
           export PATH=$PATH:$PWD/.android/platform-tools/
