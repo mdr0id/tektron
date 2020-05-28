@@ -51,8 +51,10 @@ spec:
           unzip /tmp/sdk-tools-linux.zip -d .android
           export ANDROID_HOME=$PWD/.android
           export PATH=$PATH:$PWD/.android/platform-tools/
-          echo y | .android/tools/bin/sdkmanager "platform-tools" "platforms;android-${ANDROID_COMPILE_SDK}"
-          echo y | .android/tools/bin/sdkmanager "system-images;android-24;default;x86"
+          touch ./.android/repositories.cfg
+          "$ANDROID_HOME/tools/bin/sdkmanager" "ndk-bundle"
+          echo y | .android/tools/bin/sdkmanager "platform-tools" "platforms;android-29"
+          echo y | .android/tools/bin/sdkmanager "system-images;android-29;default;x86"
           chmod +x ./gradlew
           ./gradlew clean assembleZcashtestnetRelease
  
