@@ -53,11 +53,6 @@ spec:
           export PATH=$PATH:$PWD/.android/platform-tools/
           echo y | .android/tools/bin/sdkmanager "platform-tools" "platforms;android-${ANDROID_COMPILE_SDK}"
           echo y | .android/tools/bin/sdkmanager "system-images;android-24;default;x86"
-      - name: build
-        image: debian:stretch
-        script: |
-          #!/bin/bash
-          set -e -o pipefail
           chmod +x ./gradlew
           ./gradlew clean assembleZcashtestnetRelease
-  
+ 
