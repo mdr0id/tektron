@@ -13,8 +13,6 @@ spec:
         resourceSpec:
           type: git
           params:
-            - name: revision
-              value: tekton-task-build
             - name: url
               value: https://github.com/zcash/zcash-android-wallet-sdk
   taskSpec:
