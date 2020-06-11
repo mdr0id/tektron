@@ -35,5 +35,6 @@ spec:
           ls -al
           ls ./source
           whoami
+          chmod +x ./gradlew
           ./gradlew ciBuild
  
