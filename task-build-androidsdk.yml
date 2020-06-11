@@ -33,7 +33,7 @@ spec:
           set -e -o pipefail
           pwd
           ls -al
-          ls ./source
+          cd ./source
           whoami
           chmod +x ./gradlew
           ./gradlew ciBuild
