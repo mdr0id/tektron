@@ -29,5 +29,11 @@ spec:
       - name: setup-env
         image: electriccoinco/zcash-android-builder:latest
         script: |
+          #!/bin/bash
+          set -e -o pipefail
+          pwd
+          ls -al
+          ls ./source
+          whoami
           ./gradlew ciBuild
  
