@@ -33,5 +33,5 @@ spec:
           set -e -o pipefail
           pwd
           ls -al
-          ./gradlew ciBuild
+          gradlew ciBuild
  
