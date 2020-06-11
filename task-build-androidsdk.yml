@@ -31,7 +31,5 @@ spec:
         script: |
           #!/bin/bash
           set -e -o pipefail
-          pwd
-          ls -al
-          gradlew ciBuild
+          ./source/gradlew ciBuild
  
