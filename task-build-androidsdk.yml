@@ -33,5 +33,5 @@ spec:
           set -e -o pipefail
           ls ./source
           cd ./source
-          ./gradlew ciBuild
+          sudo ./gradlew ciBuild
  
