@@ -34,7 +34,7 @@ spec:
           pwd
           echo "BIRD"
           whoami
-          ls -a ./source
+          ls -la ./source
           cd ./source
           ./gradlew ciBuid
  
