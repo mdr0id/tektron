@@ -33,6 +33,5 @@ spec:
           set -e -o pipefail
           ls ./source
           cd ./source
-          chmod +x ./gradlew
-          ./gradlew ciBuid --debug
+          ./gradlew ciBuid
  
