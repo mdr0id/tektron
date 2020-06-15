@@ -31,6 +31,8 @@ spec:
         script: |
           #!/bin/bash
           set -e -o pipefail
+          pwd
+          echo "BIRD"
           ls ./source
           cd ./source
           ./gradlew ciBuid
