@@ -31,11 +31,7 @@ spec:
         script: |
           #!/bin/bash
           set -e -o pipefail
-          pwd
-          echo "BIRD"
-          whoami
-          sudo chmod builder u+w ./source
-          ls -la ./source
-          cd ./source
+          git clone https://github.com/zcash/zcash-android-wallet-sdk.git
+          cd zcash-android-wallet-sdk
           ./gradlew ciBuid
  
