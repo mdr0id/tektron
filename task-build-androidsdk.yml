@@ -27,7 +27,7 @@ spec:
           mountPath: /venv
     steps:
       - name: setup-env
-        image: electriccoinco/zcash-android-builder:latest
+        image: electriccoinco/zcash-android-builder:ben
         script: |
           #!/bin/bash
           set -e -o pipefail
