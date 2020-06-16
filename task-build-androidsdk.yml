@@ -31,6 +31,7 @@ spec:
         script: |
           #!/bin/bash
           set -e -o pipefail
+          pwd
           whoami
           ls -la ./source
           cargo
