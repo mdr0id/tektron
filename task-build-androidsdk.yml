@@ -31,7 +31,6 @@ spec:
         script: |
           #!/bin/bash
           set -e -o pipefail
-          git clone https://github.com/zcash/zcash-android-wallet-sdk.git
-          cd zcash-android-wallet-sdk
+          cd ./source
           ./gradlew ciBuid
  
