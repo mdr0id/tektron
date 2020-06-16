@@ -27,10 +27,12 @@ spec:
           mountPath: /venv
     steps:
       - name: setup-env
-        image: electriccoinco/zcash-android-builder:ben
+        image: electriccoinco/zcash-android-builder:latest
         script: |
           #!/bin/bash
           set -e -o pipefail
+          whoami
+          ls -la ./source
           cd ./source
           ./gradlew ciBuild
  
